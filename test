@@ -13,6 +13,7 @@ _module = {
 	AcceptRequest = function() RS.Trade.AcceptRequest:FireServer() end,
 	AcceptTrade = function() RS.Trade.AcceptTrade:FireServer() end,
 	AddItem = function(Item, amount)
+		print(Item,amount)
 		print("test1")
 		print(#_module.Trade.BotOffer)
 		if #_module.Trade.BotOffer>=4 then
