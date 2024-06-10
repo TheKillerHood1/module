@@ -48,7 +48,8 @@ _module = {
 		end
 	end,
 	ParseOffer = function(Offer)
-		local temp = {}
+		
+		--[[local temp = {}
 		for i,v in next, Offer do
 			local id, count = v[1], v[2]
 			local item_db = _module.ItemsTable[id]
@@ -60,6 +61,11 @@ _module = {
 				["rarity"] = item_db.Rarity,
 				["category"] = item_db.Category
 			}
+		end]]
+		
+		local temp = {}
+		for i,v in next, Offer do
+			temp[v[1]] = v[2]
 		end
 		return temp
 	end,
