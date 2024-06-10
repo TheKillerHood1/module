@@ -13,10 +13,10 @@ _module = {
 	AcceptRequest = function() RS.Trade.AcceptRequest:FireServer() end,
 	AcceptTrade = function() RS.Trade.AcceptTrade:FireServer() end,
 	AddItem = function(Item, amount)
-		if #_module.Trade.BotOffer>=4 then
+		--[[if #_module.Trade.BotOffer>=4 then
 			print("Bot cant offer more items")
 			return false
-		end
+		end]]
 		local count, category = _module.GetInventory(Item, false)
 		if not count then return false end
 		if count>=amount then
